@@ -54,6 +54,7 @@
   align-self: center;
   background: transparent;
   border: 2px solid #ffffff;
+  margin-left: auto;
 }
 
 .profile__add-button_image {

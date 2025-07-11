@@ -1,0 +1,6 @@
+.page {
+  max-width: 1280px;
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  margin: auto;
+}

@@ -43,3 +43,15 @@
 .element__icon:hover {
   cursor: pointer;
 }
+
+@media screen and (max-width: 320px) {
+  .elements {
+    max-width: 320px;
+    margin: 36px 19px;
+  }
+
+  .element {
+    max-width: 282px;
+    border: none;
+  }
+}

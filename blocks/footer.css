@@ -8,3 +8,10 @@
   font-size: 18px;
   color: #545454;
 }
+
+@media screen and (max-width: 320px) {
+  .footer {
+    max-width: 282px;
+    margin: 50px auto 36px;
+  }
+}

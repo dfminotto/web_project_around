@@ -69,6 +69,21 @@
   background-size: contain;
 }
 
+@media screen and (max-width: 800px) {
+  .profile {
+    width: 90%;
+  }
+  .profile__name {
+    font-size: 36px;
+    display: block;
+    margin: 0 16px 0 0;
+  }
+  .profile__description {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .profile {
     max-width: 282px;

@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 358px;
+  margin: auto;
+}
+
+.form__input {
+  color: var(--secundary-color);
+  padding-bottom: 14px;
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+}

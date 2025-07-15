@@ -27,7 +27,7 @@
             <div class="profile__info">
               <h1 class="profile__name">Jacques Cousteau</h1>
               <h2 class="profile__description">Explorador</h2>
-              <button class="profile__edit-button">
+              <button class="profile__edit-button" onclick="editButton()">
                 <img src="./images/pancil.png" alt="" class="profile__edit-button_image" />
               </button>
             </div>
@@ -37,7 +37,7 @@
           </div>
         </section>
         <section class="">
-          <ul class="elements" disabled>
+          <ul class="elements">
             <li class="element">
               <img src="./images/001.jpg" alt="Vale de Yosemite" class="element__image" />
               <div class="element__footer">
@@ -82,11 +82,25 @@
             </li>
           </ul>
         </section>
+
+        <div class="popup">
+          <div class="popup__container">
+            <img src="./images/plus.png" alt="" class="popup__close" onclick="closeButton()" />
+            <h2 class="popup__title">Editar perfil</h2>
+            <form action="" class="popup__form form">
+              <input type="text" id="name" class="form__input" placeholder="Nome" />
+
+              <input type="text" id="description" class="form__input" placeholder="Descrição" />
+            </form>
+            <button class="popup__save-button" onclick="saveButton()">Salvar</button>
+          </div>
+        </div>
       </main>
 
       <footer class="footer">
         <h2 class="footer__copyright">© 2024 Around The U.S.</h2>
       </footer>
     </section>
+    <script src="./js/index.js"></script>
   </body>
 </html>

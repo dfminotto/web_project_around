@@ -21,4 +21,5 @@ function closeButton() {
 function saveButton() {
   nameElement.textContent = inputName.value;
   descriptionElement.textContent = inputDescription.value;
+  popupElement.classList.remove('popup__opened');
 }

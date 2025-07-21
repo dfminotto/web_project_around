@@ -7,19 +7,21 @@ const descriptionElement = profileInfo.querySelector('.profile__description');
 const inputName = popupElement.querySelector('#name');
 const inputDescription = popupElement.querySelector('#description');
 
-function editButton() {
+function openPopup() {
   popupElement.classList.add('popup__opened');
 
   inputName.value = nameElement.textContent;
   inputDescription.value = descriptionElement.textContent;
 }
 
-function closeButton() {
+function closePopup() {
   popupElement.classList.remove('popup__opened');
 }
 
-function saveButton() {
+function submitForm(event) {
+  event.preventDefault();
   nameElement.textContent = inputName.value;
   descriptionElement.textContent = inputDescription.value;
   popupElement.classList.remove('popup__opened');
+  closePopup();
 }

@@ -14,5 +14,5 @@ body {
 
   --opacitiy_secundary-color: rgba(0, 0, 0, 0.8);
 
-  --primary-font: 'Inter';
+  --primary-font: 'Inter', Arial, sans-serif;
 }

@@ -15,7 +15,7 @@
     <title>EUA Afora</title>
   </head>
   <body>
-    <section class="page">
+    <div class="page">
       <header class="header">
         <img src="./images/logo.png" alt="" class="logo" />
       </header>
@@ -27,7 +27,7 @@
             <div class="profile__info">
               <h1 class="profile__name">Jacques Cousteau</h1>
               <h2 class="profile__description">Explorador</h2>
-              <button class="profile__edit-button" onclick="editButton()">
+              <button class="profile__edit-button" onclick="openPopup()">
                 <img src="./images/pancil.png" alt="" class="profile__edit-button-image" />
               </button>
             </div>
@@ -39,42 +39,60 @@
         <section class="">
           <ul class="elements">
             <li class="element">
-              <img src="./images/001.jpg" alt="Vale de Yosemite" class="element__image" />
+              <img
+                src="./images/001.jpg"
+                alt="imagem do Vale de Yosemite, um lago com bastante árvores e uma grande motanha atras com um sol forte"
+                class="element__image" />
               <div class="element__footer">
                 <h2 class="element__title">Vale de Yosemite</h2>
                 <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
               </div>
             </li>
             <li class="element">
-              <img src="./images/002.jpg" alt="Lago Louise" class="element__image" />
+              <img
+                src="./images/002.jpg"
+                alt="imagem do Lago Louise no meio de duas montanhas com uma agua cristalina"
+                class="element__image" />
               <div class="element__footer">
                 <h2 class="element__title">Lago Louise</h2>
                 <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
               </div>
             </li>
             <li class="element">
-              <img src="./images/003.jpg" alt="Montanhas Care..." class="element__image" />
+              <img
+                src="./images/003.jpg"
+                alt=" image de motanhas no por do sol"
+                class="element__image" />
               <div class="element__footer">
                 <h2 class="element__title">Montanhas Care...</h2>
                 <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
               </div>
             </li>
             <li class="element">
-              <img src="./images/004.jpg" alt="Latemar" class="element__image" />
+              <img
+                src="./images/004.jpg"
+                alt="imagem do Latemar a noite com o céu cheio de estrelas e a lua ilumindando a montaha"
+                class="element__image" />
               <div class="element__footer">
                 <h2 class="element__title">Latemar</h2>
                 <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
               </div>
             </li>
             <li class="element">
-              <img src="./images/005.jpg" alt="Parque Nacional da Vanoise" class="element__image" />
+              <img
+                src="./images/005.jpg"
+                alt=" imagem do Parque Nacional da Vanoise ao entardecer, com o lago no seu canto"
+                class="element__image" />
               <div class="element__footer">
                 <h2 class="element__title">Parque Nacional da Vanoise</h2>
                 <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
               </div>
             </li>
             <li class="element">
-              <img src="./images/006.jpg" alt="Lago di Braies" class="element__image" />
+              <img
+                src="./images/006.jpg"
+                alt="imagem do Lago di Braies com uma casa e 6 barcos ancorados nela ao fundo várias montanhas com um céu acinzetado"
+                class="element__image" />
               <div class="element__footer">
                 <h2 class="element__title">Lago di Braies</h2>
                 <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
@@ -85,22 +103,22 @@
 
         <div class="popup">
           <div class="popup__container">
-            <img src="./images/plus.png" alt="" class="popup__close" onclick="closeButton()" />
+            <img src="./images/plus.png" alt="" class="popup__close" onclick="closePopup()"/>
             <h2 class="popup__title">Editar perfil</h2>
-            <form action="" class="popup__form form">
-              <input type="text" id="name" class="form__input" placeholder="Nome" />
-
-              <input type="text" id="description" class="form__input" placeholder="Descrição" />
+            <form class="popup__form form" onsubmit="submitForm(event)">
+              <input type="text" id="name" class="form__input" placeholder="Nome" maxlength="24" />
+              <input type="text" id="description" class="form__input" placeholder="Descrição"
+              maxlength="24" />
+              <button type="submit" class="popup__save-button">Salvar</button>
             </form>
-            <button class="popup__save-button" onclick="saveButton()">Salvar</button>
           </div>
         </div>
       </main>
 
       <footer class="footer">
-        <h2 class="footer__copyright">© 2024 Around The U.S.</h2>
+        <h2 class="footer__copyright">&#169 2024 Around The U.S.</h2>
       </footer>
-    </section>
+    </div>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

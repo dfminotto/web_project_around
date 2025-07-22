@@ -17,13 +17,19 @@
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.png" alt="" class="logo" />
+        <img
+          src="./images/logo.png"
+          alt="Uma imagem escrita Around The U.S simbolizando o logo da página"
+          class="logo" />
       </header>
 
       <main class="main">
         <section class="profile">
           <div class="profile__content">
-            <img src="./images/profile_picture.jpg" alt="Foto de perfil do usuário" class="avatar" />
+            <img
+              src="./images/profile_picture.jpg"
+              alt="Foto de perfil do usuário"
+              class="avatar" />
             <div class="profile__info">
               <h1 class="profile__name">Jacques Cousteau</h1>
               <h2 class="profile__description">Explorador</h2>
@@ -103,12 +109,16 @@
 
         <div class="popup">
           <div class="popup__container">
-            <img src="./images/plus.png" alt="" class="popup__close" onclick="closePopup()"/>
+            <img src="./images/plus.png" alt="" class="popup__close" onclick="closePopup()" />
             <h2 class="popup__title">Editar perfil</h2>
             <form class="popup__form form" onsubmit="submitForm(event)">
               <input type="text" id="name" class="form__input" placeholder="Nome" maxlength="24" />
-              <input type="text" id="description" class="form__input" placeholder="Descrição"
-              maxlength="24" />
+              <input
+                type="text"
+                id="description"
+                class="form__input"
+                placeholder="Descrição"
+                maxlength="24" />
               <button type="submit" class="popup__save-button">Salvar</button>
             </form>
           </div>
@@ -116,7 +126,7 @@
       </main>
 
       <footer class="footer">
-        <h2 class="footer__copyright">&#169 2024 Around The U.S.</h2>
+        <h2 class="footer__copyright">&#169; 2024 Around The U.S.</h2>
       </footer>
     </div>
     <script src="./scripts/index.js"></script>

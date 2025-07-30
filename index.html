@@ -33,11 +33,11 @@
             <div class="profile__info">
               <h1 class="profile__name">Jacques Cousteau</h1>
               <h2 class="profile__description">Explorador</h2>
-              <button class="profile__edit-button" onclick="openPopup('edit')">
+              <button class="profile__edit-button">
                 <img src="./images/pancil.png" alt="" class="profile__edit-button-image" />
               </button>
             </div>
-            <button class="profile__add-button" onclick="openPopup('new-card')">
+            <button class="profile__add-button">
               <img src="./images/plus.png" alt="" class="profile__add-button-image" />
             </button>
           </div>
@@ -57,8 +57,11 @@
 
         <div class="popup" id="edit-popup" data-type="edit">
           <div class="popup__container">
-            <img src="./images/plus.png" alt="" class="popup__close"
-            onclick="closePopup(this.closest('.popup'))"" />
+            <img
+              src="./images/plus.png"
+              alt=""
+              class="popup__close"
+              onclick="closePopup(this.closest('.popup'))" />
             <h2 class="popup__title">Editar perfil</h2>
             <form class="popup__form form" onsubmit="submitForm(event)">
               <input type="text" id="name" class="form__input" placeholder="Nome" maxlength="24" />
@@ -75,8 +78,11 @@
 
         <div class="popup" id="new-element-popup" data-type="new-card">
           <div class="popup__container">
-            <img src="./images/plus.png" alt="" class="popup__close"
-            onclick="closePopup(this.closest('.popup'))"" />
+            <img
+              src="./images/plus.png"
+              alt=""
+              class="popup__close"
+              onclick="closePopup(this.closest('.popup'))" />
             <h2 class="popup__title">Novo local</h2>
             <form class="popup__form form" onsubmit="submitForm(event)">
               <input

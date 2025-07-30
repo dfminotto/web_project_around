@@ -33,83 +33,32 @@
             <div class="profile__info">
               <h1 class="profile__name">Jacques Cousteau</h1>
               <h2 class="profile__description">Explorador</h2>
-              <button class="profile__edit-button" onclick="openPopup()">
+              <button class="profile__edit-button" onclick="openPopup('edit')">
                 <img src="./images/pancil.png" alt="" class="profile__edit-button-image" />
               </button>
             </div>
-            <button class="profile__add-button">
+            <button class="profile__add-button" onclick="openPopup('new-card')">
               <img src="./images/plus.png" alt="" class="profile__add-button-image" />
             </button>
           </div>
         </section>
         <section class="">
-          <ul class="elements">
+          <template id="elements-template">
             <li class="element">
-              <img
-                src="./images/001.jpg"
-                alt="imagem do Vale de Yosemite, um lago com bastante árvores e uma grande motanha atras com um sol forte"
-                class="element__image" />
+              <img src="" alt="" class="element__image" />
               <div class="element__footer">
-                <h2 class="element__title">Vale de Yosemite</h2>
+                <h2 class="element__title"></h2>
                 <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
               </div>
             </li>
-            <li class="element">
-              <img
-                src="./images/002.jpg"
-                alt="imagem do Lago Louise no meio de duas montanhas com uma agua cristalina"
-                class="element__image" />
-              <div class="element__footer">
-                <h2 class="element__title">Lago Louise</h2>
-                <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
-              </div>
-            </li>
-            <li class="element">
-              <img
-                src="./images/003.jpg"
-                alt=" image de motanhas no por do sol"
-                class="element__image" />
-              <div class="element__footer">
-                <h2 class="element__title">Montanhas Care...</h2>
-                <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
-              </div>
-            </li>
-            <li class="element">
-              <img
-                src="./images/004.jpg"
-                alt="imagem do Latemar a noite com o céu cheio de estrelas e a lua ilumindando a montaha"
-                class="element__image" />
-              <div class="element__footer">
-                <h2 class="element__title">Latemar</h2>
-                <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
-              </div>
-            </li>
-            <li class="element">
-              <img
-                src="./images/005.jpg"
-                alt=" imagem do Parque Nacional da Vanoise ao entardecer, com o lago no seu canto"
-                class="element__image" />
-              <div class="element__footer">
-                <h2 class="element__title">Parque Nacional da Vanoise</h2>
-                <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
-              </div>
-            </li>
-            <li class="element">
-              <img
-                src="./images/006.jpg"
-                alt="imagem do Lago di Braies com uma casa e 6 barcos ancorados nela ao fundo várias montanhas com um céu acinzetado"
-                class="element__image" />
-              <div class="element__footer">
-                <h2 class="element__title">Lago di Braies</h2>
-                <img src="./images/heart-button.png" alt="Curtir" class="element__icon" />
-              </div>
-            </li>
-          </ul>
+          </template>
+          <ul class="elements"></ul>
         </section>
 
-        <div class="popup">
+        <div class="popup" id="edit-popup" data-type="edit">
           <div class="popup__container">
-            <img src="./images/plus.png" alt="" class="popup__close" onclick="closePopup()" />
+            <img src="./images/plus.png" alt="" class="popup__close"
+            onclick="closePopup(this.closest('.popup'))"" />
             <h2 class="popup__title">Editar perfil</h2>
             <form class="popup__form form" onsubmit="submitForm(event)">
               <input type="text" id="name" class="form__input" placeholder="Nome" maxlength="24" />
@@ -120,6 +69,24 @@
                 placeholder="Descrição"
                 maxlength="24" />
               <button type="submit" class="popup__save-button">Salvar</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="popup" id="new-element-popup" data-type="new-card">
+          <div class="popup__container">
+            <img src="./images/plus.png" alt="" class="popup__close"
+            onclick="closePopup(this.closest('.popup'))"" />
+            <h2 class="popup__title">Novo local</h2>
+            <form class="popup__form form" onsubmit="submitForm(event)">
+              <input
+                type="text"
+                id="titulo"
+                class="form__input"
+                placeholder="Título"
+                maxlength="24" />
+              <input type="text" id="url-link" class="form__input" placeholder="Link de imagem" />
+              <button type="submit" class="popup__save-button">Criar</button>
             </form>
           </div>
         </div>

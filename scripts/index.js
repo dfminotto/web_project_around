@@ -4,12 +4,14 @@ const elementContainer = document.querySelector('.elements');
 const nameElement = profileInfo.querySelector('.profile__name');
 const descriptionElement = profileInfo.querySelector('.profile__description');
 
-// const addButton = document.querySelector('.profile__add-button');
-// const editButton = document.querySelector('.profile__edit-button');
-
 elementContainer.addEventListener('click', (event) => {
   if (event.target.classList.contains('element__icon')) {
     event.target.classList.toggle('element__icon-active');
+  }
+
+  if (event.target.classList.contains('element__trash')) {
+    const cardRemove = event.target.closest('.element');
+    cardRemove.remove();
   }
 });
 
@@ -22,9 +24,6 @@ profileInfo.addEventListener('click', (event) => {
     openPopup('edit');
   }
 });
-
-// addButton.addEventListener('click', () => openPopup('new-card'));
-// editButton.addEventListener('click', () => openPopup('edit'));
 
 function openPopup(type) {
   const popupElement = document.querySelector(`.popup[data-type="${type}"]`);

@@ -9,6 +9,11 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.popup__type-image {
+  /* max-width: 75vw;
+  max-height: 75vh; */
+}
+
 .popup__opened {
   display: flex;
   flex-direction: column;
@@ -21,6 +26,24 @@
   background-color: var(--primary-color);
   margin: auto;
   border-radius: 10px;
+}
+
+.popup__container-image {
+  position: relative;
+  margin: auto;
+}
+
+.popup__image {
+  max-width: 75vw;
+  max-height: 75vh;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.popup__image-title {
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--primary-color);
 }
 
 .popup__close {

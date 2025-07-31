@@ -4,6 +4,10 @@ const elementContainer = document.querySelector('.elements');
 const nameElement = profileInfo.querySelector('.profile__name');
 const descriptionElement = profileInfo.querySelector('.profile__description');
 
+const imagePopup = document.querySelector('#image-popup');
+const popupImage = imagePopup.querySelector('.popup__image');
+const titleImage = imagePopup.querySelector('.popup__image-title');
+
 elementContainer.addEventListener('click', (event) => {
   if (event.target.classList.contains('element__icon')) {
     event.target.classList.toggle('element__icon-active');
@@ -12,6 +16,17 @@ elementContainer.addEventListener('click', (event) => {
   if (event.target.classList.contains('element__trash')) {
     const cardRemove = event.target.closest('.element');
     cardRemove.remove();
+  }
+
+  const clickedImage = event.target.closest('.element__image');
+  if (clickedImage) {
+    const cardElement = clickedImage.closest('.element');
+    const title = cardElement.querySelector('.element__title').textContent;
+
+    popupImage.src = clickedImage.src;
+    popupImage.alt = clickedImage.alt;
+    titleImage.textContent = title;
+    imagePopup.classList.add('popup__opened');
   }
 });
 
@@ -31,7 +46,6 @@ function openPopup(type) {
   if (type === 'edit') {
     const inputName = popupElement.querySelector('#name');
     const inputDescription = popupElement.querySelector('#description');
-    popupElement.classList.add('popup__opened');
     inputName.value = nameElement.textContent;
     inputDescription.value = descriptionElement.textContent;
   } else {
@@ -69,23 +83,24 @@ function submitForm(event) {
       link: link,
     };
 
-    const addCard = (card) => {
-      const cardTemplate = document.querySelector('#elements-template').content;
-      const cardElement = cardTemplate.cloneNode(true);
-
-      const img = cardElement.querySelector('.element__image');
-      const titleEl = cardElement.querySelector('.element__title');
-
-      img.src = card.link;
-      img.alt = `Imagem de ${card.name}`;
-      titleEl.textContent = card.name;
-
-      elementContainer.prepend(cardElement);
-    };
     addCard(cardData);
   }
 
   closePopup(popupElement);
+}
+
+function addCard(card) {
+  const cardTemplate = document.querySelector('#elements-template').content;
+  const cardElement = cardTemplate.cloneNode(true);
+
+  const img = cardElement.querySelector('.element__image');
+  const titleEl = cardElement.querySelector('.element__title');
+
+  img.src = card.link;
+  img.alt = `Imagem de ${card.name}`;
+  titleEl.textContent = card.name;
+
+  elementContainer.prepend(cardElement);
 }
 
 const initialCards = [

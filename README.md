@@ -1,31 +1,50 @@
 # Acesse o site aqui <a href="https://dfminotto.github.io/web_project_around/" target="_blank">aqui</a>
 
-# Tripleten web_project_homeland
+# 📸 Tripleten - Web Project Homeland
 
-Projeto de website responsivo desenvolvido com Java Script, HTML, CSS e Flexbox, com base em
-protótipo criado no Figma.
+Projeto de website responsivo desenvolvido com HTML, CSS e JavaScript puro, com base em um protótipo
+criado no Figma.
+
+---
 
 ## 📌 Descrição
 
-Este projeto tem como objetivo criar uma interface web moderna, responsiva e acessível utilizando
-apenas tecnologias front-end puras, sem frameworks. O layout foi desenhado no Figma e depois
-implementado com HTML e CSS, usando principalmente o modelo de layout Flexbox e GRID.
+Este projeto tem como objetivo criar uma interface web moderna, responsiva e interativa utilizando
+apenas tecnologias front-end puras, sem frameworks. A proposta visual foi desenvolvida no Figma e
+implementada com HTML, CSS e JavaScript, utilizando Flexbox e Grid para estruturação do layout.
+
+---
 
 ## 🎯 Funcionalidades
 
-Layout responsivo Navegação simples e intuitiva Uso de Flexbox para organização dos elementos
-Adaptação para diferentes tamanhos de tela Design limpo e baseado em protótipo do Figma Utilização
-de GRID
+- ✅ Layout 100% responsivo
+- ✅ Cards dinâmicos com imagens e título
+- ✅ Abertura de popup com imagem e legenda ao clicar em uma foto
+- ✅ Botão de curtir que alterna entre contorno e preenchido
+- ✅ Botão de excluir que remove o card do DOM
+- ✅ Formulário para adicionar novos cards
+- ✅ Delegação de eventos para maior desempenho
+- ✅ Uso de template HTML para clonagem de cards
+
+---
 
 ## 🛠 Tecnologias Utilizadas
 
-HTML5 – Estrutura semântica do conteúdo CSS3 – Estilização e responsividade Flexbox – Layout
-flexível para posicionamento de elementos Media Queries – Ajustes de estilo para diferentes
-resoluções Figma – Design e prototipagem da interface GRID - Utilizado GRID layout para as imagens e
-locais
+- **HTML5** – Estrutura semântica do conteúdo
+- **CSS3** – Estilização e responsividade
+- **Flexbox** – Organização de seções e elementos
+- **CSS Grid** – Layout de seções com múltiplas colunas (como galeria)
+- **JavaScript (puro)** – Interatividade, manipulação do DOM e controle de popups
+- **Media Queries** – Responsividade em múltiplos dispositivos
+- **Figma** – Design e prototipagem da interface
+
+---
 
 ## 📱 Responsividade
 
-O site foi desenvolvido com abordagem desktop-first, e testado em diferentes resoluções:
+O site foi desenvolvido com abordagem **desktop-first** e testado em diferentes resoluções,
+incluindo:
 
-Celulares Tablets Desktops
+- 📱 Celulares
+- 💻 Tablets
+- 🖥 Desktops

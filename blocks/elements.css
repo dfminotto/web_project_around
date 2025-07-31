@@ -8,6 +8,7 @@
 }
 
 .element {
+  position: relative;
   display: flex;
   flex-direction: column;
   max-width: 282px;
@@ -22,6 +23,22 @@
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.element__trash {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  background-image: url('../images/Trash.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.element__trash:hover {
+  opacity: 0.6;
+  cursor: pointer;
 }
 
 .element__footer {
@@ -46,6 +63,10 @@
 .element__icon:hover {
   cursor: pointer;
   opacity: 0.6;
+}
+
+.element__icon-active {
+  background-image: url('../images/heart-button-black.png');
 }
 
 @media screen and (max-width: 800px) {

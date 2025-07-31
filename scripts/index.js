@@ -8,6 +8,13 @@ const imagePopup = document.querySelector('#image-popup');
 const popupImage = imagePopup.querySelector('.popup__image');
 const titleImage = imagePopup.querySelector('.popup__image-title');
 
+imagePopup.addEventListener('click', (event) => {
+  const clickedOutside = !event.target.closest('.popup__container-image');
+  if (clickedOutside) {
+    closePopup(imagePopup);
+  }
+});
+
 elementContainer.addEventListener('click', (event) => {
   if (event.target.classList.contains('element__icon')) {
     event.target.classList.toggle('element__icon-active');
@@ -19,6 +26,7 @@ elementContainer.addEventListener('click', (event) => {
   }
 
   const clickedImage = event.target.closest('.element__image');
+
   if (clickedImage) {
     const cardElement = clickedImage.closest('.element');
     const title = cardElement.querySelector('.element__title').textContent;
@@ -53,6 +61,14 @@ function openPopup(type) {
   }
   popupElement.classList.add('popup__opened');
 }
+
+document.querySelectorAll('.popup').forEach((popupElement) => {
+  popupElement.addEventListener('click', (event) => {
+    if (event.target === popupElement) {
+      closePopup(popupElement);
+    }
+  });
+});
 
 function closePopup(popupElement) {
   popupElement.classList.remove('popup__opened');
@@ -94,11 +110,11 @@ function addCard(card) {
   const cardElement = cardTemplate.cloneNode(true);
 
   const img = cardElement.querySelector('.element__image');
-  const titleEl = cardElement.querySelector('.element__title');
+  const titleElement = cardElement.querySelector('.element__title');
 
   img.src = card.link;
-  img.alt = `Imagem de ${card.name}`;
-  titleEl.textContent = card.name;
+  img.alt = card.name;
+  titleElement.textContent = card.name;
 
   elementContainer.prepend(cardElement);
 }
@@ -130,16 +146,4 @@ const initialCards = [
   },
 ];
 
-initialCards.forEach((card) => {
-  const cardTemplate = document.querySelector('#elements-template').content;
-  const cardElement = cardTemplate.cloneNode(true);
-
-  const img = cardElement.querySelector('.element__image');
-  const title = cardElement.querySelector('.element__title');
-
-  img.src = card.link;
-  img.alt = `Imagem de ${card.name}`;
-  title.textContent = card.name;
-
-  elementContainer.append(cardElement);
-});
+initialCards.forEach(addCard);

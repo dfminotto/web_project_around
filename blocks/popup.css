@@ -9,11 +9,6 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.popup__type-image {
-  /* max-width: 75vw;
-  max-height: 75vh; */
-}
-
 .popup__opened {
   display: flex;
   flex-direction: column;
@@ -82,4 +77,27 @@
 
 .popup__save-button:hover {
   background-color: var(--opacitiy_secundary-color);
+}
+
+@media screen and (max-width: 440px) {
+  .popup__container {
+    max-width: 340px;
+  }
+
+  .popup__close {
+    top: -60px;
+    right: 0px;
+  }
+
+  .popup__title {
+    width: 90%;
+  }
+
+  .popup__form {
+    width: 90%;
+  }
+
+  .popup__save-button {
+    max-width: 300px;
+  }
 }
